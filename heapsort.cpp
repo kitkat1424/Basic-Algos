@@ -24,14 +24,13 @@ int main()
     }   
     return 0;
 }
-
 void build_heap(int *array, int size){
     for(int i=size/2; i>=1 ; i--){                        //i=size/2 cuz leaves of the heap begin from n/2. Since a leaf node has no children, there is no need to call max_heapify on it
+        max_heapify(array,i,size);
     }
 }
-
 void max_heapify(int *array, int i, int size){
-    int l = 2*i, r = 2*i +1;                                 //l and r are the left child and right child respectively
+    int l = 2*i, r = 2*i +1;                                  //l and r are the left child and right child respectively
     int largest; 
     if(l-1 < size && array[l-1] > array[i-1]){                //minus 1 cuz indices begin at 0
         largest = l;
