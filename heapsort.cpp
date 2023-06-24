@@ -31,7 +31,7 @@ void build_heap(int *array, int size){
 }
 
 void max_heapify(int *array, int i, int size){
-    int l = 2*i, r = 2*i +1;
+    int l = 2*i, r = 2*i +1;                                 //l and r are the left child and right child respectively
     int largest; 
     if(l-1 < size && array[l-1] > array[i-1]){                //minus 1 cuz indices begin at 0
         largest = l;
